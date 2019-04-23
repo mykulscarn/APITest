@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		35E320C2226E43D10030D27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320C1226E43D10030D27D /* AppDelegate.swift */; };
-		35E320C4226E43D10030D27D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320C3226E43D10030D27D /* ViewController.swift */; };
 		35E320C7226E43D10030D27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E320C5226E43D10030D27D /* Main.storyboard */; };
 		35E320C9226E43D40030D27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E320C8226E43D40030D27D /* Assets.xcassets */; };
 		35E320CC226E43D40030D27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E320CA226E43D40030D27D /* LaunchScreen.storyboard */; };
+		35E320D5226E44090030D27D /* PlayerReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320D4226E44090030D27D /* PlayerReferences.swift */; };
+		35E320D7226E44750030D27D /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320D6226E44750030D27D /* PlayerManager.swift */; };
+		35E320DB226E46CD0030D27D /* PlayerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320DA226E46CD0030D27D /* PlayerInfoViewController.swift */; };
+		35E320DE226E48130030D27D /* NbaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320DD226E48130030D27D /* NbaAPIClient.swift */; };
+		35E320E0226E48720030D27D /* PlayerReferencesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320DF226E48720030D27D /* PlayerReferencesRequest.swift */; };
+		35E320E2226E48B30030D27D /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320E1226E48B30030D27D /* NetworkDispatcher.swift */; };
+		35E320E4226E4A7B0030D27D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E320E3226E4A7B0030D27D /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35E320BE226E43D10030D27D /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E320C1226E43D10030D27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35E320C3226E43D10030D27D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35E320C6226E43D10030D27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35E320C8226E43D40030D27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35E320CB226E43D40030D27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E320CD226E43D40030D27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E320D4226E44090030D27D /* PlayerReferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerReferences.swift; sourceTree = "<group>"; };
+		35E320D6226E44750030D27D /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		35E320DA226E46CD0030D27D /* PlayerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoViewController.swift; sourceTree = "<group>"; };
+		35E320DD226E48130030D27D /* NbaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaAPIClient.swift; sourceTree = "<group>"; };
+		35E320DF226E48720030D27D /* PlayerReferencesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerReferencesRequest.swift; sourceTree = "<group>"; };
+		35E320E1226E48B30030D27D /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		35E320E3226E4A7B0030D27D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,35 @@
 			isa = PBXGroup;
 			children = (
 				35E320C1226E43D10030D27D /* AppDelegate.swift */,
-				35E320C3226E43D10030D27D /* ViewController.swift */,
 				35E320C5226E43D10030D27D /* Main.storyboard */,
+				35E320DA226E46CD0030D27D /* PlayerInfoViewController.swift */,
+				35E320DC226E47E60030D27D /* Network */,
+				35E320D3226E43F40030D27D /* dataModels */,
 				35E320C8226E43D40030D27D /* Assets.xcassets */,
 				35E320CA226E43D40030D27D /* LaunchScreen.storyboard */,
 				35E320CD226E43D40030D27D /* Info.plist */,
 			);
 			path = APITest;
+			sourceTree = "<group>";
+		};
+		35E320D3226E43F40030D27D /* dataModels */ = {
+			isa = PBXGroup;
+			children = (
+				35E320D4226E44090030D27D /* PlayerReferences.swift */,
+				35E320D6226E44750030D27D /* PlayerManager.swift */,
+			);
+			path = dataModels;
+			sourceTree = "<group>";
+		};
+		35E320DC226E47E60030D27D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				35E320DD226E48130030D27D /* NbaAPIClient.swift */,
+				35E320DF226E48720030D27D /* PlayerReferencesRequest.swift */,
+				35E320E1226E48B30030D27D /* NetworkDispatcher.swift */,
+				35E320E3226E4A7B0030D27D /* JSONParser.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35E320C4226E43D10030D27D /* ViewController.swift in Sources */,
+				35E320D5226E44090030D27D /* PlayerReferences.swift in Sources */,
+				35E320DB226E46CD0030D27D /* PlayerInfoViewController.swift in Sources */,
+				35E320E4226E4A7B0030D27D /* JSONParser.swift in Sources */,
+				35E320D7226E44750030D27D /* PlayerManager.swift in Sources */,
+				35E320E2226E48B30030D27D /* NetworkDispatcher.swift in Sources */,
 				35E320C2226E43D10030D27D /* AppDelegate.swift in Sources */,
+				35E320E0226E48720030D27D /* PlayerReferencesRequest.swift in Sources */,
+				35E320DE226E48130030D27D /* NbaAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
